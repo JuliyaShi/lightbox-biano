@@ -1,3 +1,3 @@
 # lightbox-biano
-lightbox-biano
+lightbox-biano \
 The biano lightbox task.
