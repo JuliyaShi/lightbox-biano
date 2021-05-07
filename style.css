@@ -1,0 +1,146 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+body{font: normal 13px/20px Segoe UI,Frutiger,Frutiger Linotype,Dejavu Sans,Helvetica Neue,Arial,sans-serif;
+    -webkit-font-smoothing: antialiased;}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: #FFFFFF;
+    max-width: 80%;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    border-bottom: 1px solid #FFFFFF;
+}
+
+.modal-header .title {
+    font-size: 0.75rem;
+
+
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.modal-body {
+    padding: 10px 15px ;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+.logoimg, .title {
+    display: inline-block;
+
+}
+.title, .close-button {
+    color: #A9A9A9FF;
+
+}
+.title{
+    margin-left:15px;
+}
+.close-button{
+    margin-left: 200px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-rows: auto;
+    grid-gap: 10px 30px;
+    border-radius: 10px;
+}
+.card .img{
+    border-radius: 50%;
+}
+.card:nth-child(1){
+    grid-column: 1/4;
+}
+
+.ts {
+    background-color: #E8F8EE;
+    color: #25BE66;
+}
+
+.grid-btn {
+    border-radius: 5px;
+    border: 2px solid #B8D4B5FFD;
+    background-color: #B8D4B5FF;
+    color: #2E8B57FF;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding: 6px 20px;
+    text-decoration: none;
+    transition: 0.2s ease;
+    cursor: pointer;
+    font-weight: 400;
+}
+.grid-price {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.grid-title {
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+@media  (max-width: 912px){
+    .cards{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-auto-rows: auto;
+        grid-gap: 10px 20px;
+        border-radius: 10px;
+    }
+    .card:nth-child(1){
+        grid-column: 1/2;
+    }
+}
+
+}
